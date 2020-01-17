@@ -2,6 +2,7 @@ package com.willrussell.guessgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (guessedValue == randomNumber) {
             numberView.setText(getResources().getString(R.string.guess_correct_label));
-            generateNumber();
+            Intent intent = new Intent(this, CongratuationsActivity.class);
+            startActivity(intent);
         } else {
             numberView.setText(getResources().getString(R.string.guess_incorrect_label));
         }
