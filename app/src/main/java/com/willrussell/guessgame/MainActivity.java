@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -14,8 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int randomNumber;
     private TextView numberView;
-    private EditText userInputEditText;
-    private Button submitButton;
+    private EditText inputEditText;
 
 
     @Override
@@ -24,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         numberView = findViewById(R.id.number_view);
-        userInputEditText = findViewById(R.id.user_input);
-        submitButton = findViewById(R.id.submit_button);
+        inputEditText = findViewById(R.id.user_input);
         generateNumber();
     }
 
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        String input = userInputEditText.getText().toString();
+        String input = inputEditText.getText().toString();
         int guessedValue = Integer.parseInt(input);
 
         if (guessedValue == randomNumber) {
