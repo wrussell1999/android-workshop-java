@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         this.randomNumber = random.nextInt(10);
     }
 
+
     public void onClick(View v) {
         String input = inputEditText.getText().toString();
         int guessedValue = Integer.parseInt(input);
@@ -52,9 +53,19 @@ public class MainActivity extends AppCompatActivity {
         if (guessedValue == randomNumber) {
             numberView.setText(getResources().getString(R.string.guess_correct_label));
             Intent intent = new Intent(this, CongratuationsActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
         } else {
             numberView.setText(getResources().getString(R.string.guess_incorrect_label));
         }
     }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            generateNumber();
+        }
+    }
+
+
 }
