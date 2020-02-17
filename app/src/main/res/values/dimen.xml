@@ -3,4 +3,5 @@
     <dimen name="input_margin">32dp</dimen>
     <dimen name="title_size">36dp</dimen>
     <dimen name="cake_margin">16dp</dimen>
+    <dimen name="cake_height">100dp</dimen>
 </resources>

@@ -7,11 +7,22 @@
     tools:context=".CongratuationsActivity">
 
     <ImageView
+        android:id="@+id/label"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/cake_height"
         android:src="@drawable/cake"
         android:layout_margin="@dimen/cake_margin"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        android:onClick="tryAgain"
+        app:layout_constraintTop_toBottomOf="@id/label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
