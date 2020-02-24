@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (guessedValue == randomNumber) {
             numberView.setText(getResources().getString(R.string.guess_correct_label));
-            Intent intent = new Intent(this, CongratuationsActivity.class);
+            Intent intent = new Intent(this, PartyActivity.class);
             startActivityForResult(intent, 1);
         } else {
             numberView.setText(getResources().getString(R.string.guess_incorrect_label));
