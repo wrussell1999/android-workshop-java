@@ -1,6 +1,8 @@
 # Android Workshop
 
-Basic guessing game workshop for Developer Student Clubs at the University of Birmingham
+Introduction to Android Development by Will Russell.
+
+How to make your own basic guessing game
 
 Here are the slides:
 
@@ -9,5 +11,6 @@ Here are the slides:
 
 This workshop has been run at:
 
+- Hack the Burgh VI
 - CovHack2020
 - Developers Student Clubs: University of Birmingham
